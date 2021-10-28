@@ -1,7 +1,9 @@
+-- comando para criação de um banco de dados: CREATE DATABASE.
 CREATE DATABASE db_cursoDaMinhaVida;
 
 USE db_cursoDaMinhaVida;
 
+-- Criação de uma tabela no banco de dados com os atributos
 CREATE TABLE tb_categoria(
 	id BIGINT AUTO_INCREMENT,
     area VARCHAR(255) NOT NULL,
@@ -27,6 +29,7 @@ CREATE TABLE tb_produto(
     FOREIGN KEY (categoria_id) REFERENCES tb_categoria(id)
 );
 
+-- inserção de dados na tabela criada
 INSERT INTO tb_categoria(area, subarea, gratuito) 
 VALUES
 	("Java", "orientação à objeto", TRUE),
@@ -35,6 +38,7 @@ VALUES
     ("FrontEnd", "HTML, CSS e JavaScript", FALSE),
     ("Java", "Spring", FALSE);
 
+-- Modificação na tabela, referente a forma como será mostrado os numeros reais do atributo valor.
 ALTER TABLE tb_produto MODIFY valor decimal(8,2);
 
 INSERT INTO tb_produto(nome, valor, horas, requisitos, disponivel, categoria_id) 
@@ -54,6 +58,7 @@ SELECT nome, valor FROM tb_produto WHERE valor BETWEEN 0 AND 60;
 
 SELECT nome FROM tb_produto WHERE nome LIKE "%j%";
 
+-- Exibir todos relacionados as tabelas criadas 
 SELECT  * FROM tb_produto 
 INNER JOIN tb_categoria
 ON tb_categoria.id = tb_produto.categoria_id;

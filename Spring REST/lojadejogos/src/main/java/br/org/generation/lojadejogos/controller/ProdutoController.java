@@ -29,13 +29,14 @@ public class ProdutoController {
 	private ProdutoRepository produtoRepository;
 	
 	@GetMapping
-	public ResponseEntity<List<Produto>> findAllProduto()
+	public ResponseEntity<List<Produto>> getAll()
 	{
 		return ResponseEntity.ok(produtoRepository.findAll());
 	}
+
 	
 	@GetMapping("/{id}")
-	public ResponseEntity<Produto> findByIdProduto(@PathVariable long id)
+	public ResponseEntity<Produto> getById(@PathVariable long id)
 	{
 		return produtoRepository.findById(id)
 				.map(resposta -> ResponseEntity.ok(resposta))
@@ -43,7 +44,7 @@ public class ProdutoController {
 	}
 	
 	@GetMapping("/titulo/{titulo}")
-	public ResponseEntity<List<Produto>> findByTituloProduto(@PathVariable String titulo)
+	public ResponseEntity<List<Produto>> getByTitulo(@PathVariable String titulo)
 	{
 		return ResponseEntity.ok(produtoRepository.findAllByTituloContainingIgnoreCase(titulo));
 	}

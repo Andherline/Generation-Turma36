@@ -6,13 +6,50 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "tb_produto")
 public class Produto {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	long id;
+	
+	@NotNull
+	@Size(min = 5, max = 30, message = "Digite um nome que contenha entre 5 à 30 letras.")
+	String titulo;
+	
+	@NotNull
+	@Size(min = 5, max = 100, message = "Digite um nome que contenha entre 5 à 100 letras.")
+	String descricao;
+	
+	@NotNull
+	int quantidade;
+	
+	@NotNull
+	BigDecimal preço;
+	
+	@NotNull
+	String foto;
+	
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	Categoria categoria;
+	
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
 
 	public long getId() {
 		return id;
@@ -62,24 +99,5 @@ public class Produto {
 		this.foto = foto;
 	}
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	long id;
 	
-	@NotNull
-	@Size(min = 5, max = 30, message = "Digite um nome que contenha entre 5 à 30 letras.")
-	String titulo;
-	
-	@NotNull
-	@Size(min = 5, max = 100, message = "Digite um nome que contenha entre 5 à 100 letras.")
-	String descricao;
-	
-	@NotNull
-	int quantidade;
-	
-	@NotNull
-	BigDecimal preço;
-	
-	@NotNull
-	String foto;
 }

@@ -19,13 +19,19 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Categoria {
 	
 	@Id
+<<<<<<< HEAD
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
+=======
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	long id;
+>>>>>>> camadas
 	
 	@NotNull
 	@Size(min = 3,max = 20, message = "Digite um gênero que contenha entre 3 à 20 letras.")
 	private String genero;
 	
+<<<<<<< HEAD
 	@NotNull
 	@Size(min = 5,max = 20, message = "Digite o nome de uma plataforma que contenha entre 5 à 20 letras.")
 	private String plataforma;
@@ -41,6 +47,11 @@ public class Categoria {
 	public void setProduto(List<Produto> produto) {
 		this.produto = produto;
 	}
+=======
+	@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("categoria")
+	private List<Produto> produto;
+>>>>>>> camadas
 
 	public long getId() {
 		return id;
@@ -58,13 +69,12 @@ public class Categoria {
 		this.genero = genero;
 	}
 
-	public String getPlataforma() {
-		return plataforma;
+	public List<Produto> getProduto() {
+		return produto;
 	}
 
-	public void setPlataforma(String plataforma) {
-		this.plataforma = plataforma;
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
 	}
 
-	
 }

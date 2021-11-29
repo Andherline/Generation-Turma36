@@ -80,11 +80,11 @@ function enviar ()
 function mapaNormal()
 {
     mapa.style.width = '800px'
-    mapa.style.heigth = '600px'
+    mapa.style.height = '600px'
 }
 
 function mapaZoom()
 {
     mapa.style.width = '400px'
-    mapa.style.heigth = '250px'
+    mapa.style.height = '250px'
 }

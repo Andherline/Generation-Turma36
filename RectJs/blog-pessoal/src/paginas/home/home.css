@@ -1,0 +1,14 @@
+.titulo
+{
+    color:darkblue;
+    text-align: center;
+}
+
+.img
+{
+    width: 500px;
+    height: 500px;
+    display:block; /*transforma imagem em bloco*/
+    margin: 0 auto;
+
+}

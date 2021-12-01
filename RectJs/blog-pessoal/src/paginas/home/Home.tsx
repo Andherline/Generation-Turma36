@@ -1,13 +1,13 @@
 import React from "react";
 import './home.css';
-//t
+import {Button, Box, Paper} from '@material-ui/core';
+
+//Box p={2}: p é de padding(espaçamento interno dos elementos)
 function Home()
 {
     return(
-        
         <>
-            <h1 className='titulo'>Teste</h1>
-            <img src='https://i.imgur.com/CBL3NU0.jpeg' alt='imagem Tela Principal' className='img'/>
+            <h1>Home</h1>
         </>
         
     );

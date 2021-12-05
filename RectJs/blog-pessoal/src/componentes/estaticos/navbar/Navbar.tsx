@@ -2,6 +2,7 @@ import React from 'react'
 import { AppBar, Toolbar, Typography, Box } from '@material-ui/core'
 import './Navbar.css';
 
+//mudar fonte
 function Navbar() {
     return (
         <>

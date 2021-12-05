@@ -1,14 +1,13 @@
 import React from "react";
-import './home.css';
+import './Home.css';
 import { Grid, Box, Typography, Button } from '@material-ui/core'
-
 
 function Home() {
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#2a3948" }}>
                 <Grid item alignItems="center" xs={6}>
-                    <Box paddingX={20}>
+                    <Box paddingX={20} >
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>
                             Seja bem vinda(o)!
                         </Typography >

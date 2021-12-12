@@ -2,6 +2,7 @@ import React from "react";
 import './Home.css';
 
 import { Grid, Box, Typography, Button } from '@material-ui/core'
+import TabPostagem from "../../componentes/postagens/tabpostagem/TabPostagem";
 
 function Home() {
     return (
@@ -28,6 +29,7 @@ function Home() {
                     <img src="https://images.unsplash.com/photo-1527679124583-9208be990bb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80" alt="Image Teste" width="500px" height="500px"/>
                 </Grid>
                 <Grid xs={12} className="postagens">
+                    <TabPostagem />
                 </Grid>
             </Grid>
         </>

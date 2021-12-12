@@ -6,6 +6,8 @@ import Home from './paginas/home/Home';
 import Login from './paginas/login/Login';
 import Cadastro from './paginas/cadastro/Cadastro';
 import './App.css';
+import ListaTema from './componentes/temas/listatema/ListaTema';
+import ListaPostagem from './componentes/postagens/listapostagem/ListaPostagem';
 
 
 //React Router : criação de rotas entre as aplicações no Rect.
@@ -27,6 +29,12 @@ function App() {
               </Route>
               <Route path="/cadastro">
                 <Cadastro />
+              </Route>
+              <Route path="/tema">
+                <ListaTema />
+              </Route>
+              <Route path="/postagens">
+                <ListaPostagem />
               </Route>
             </div>
         </Switch>

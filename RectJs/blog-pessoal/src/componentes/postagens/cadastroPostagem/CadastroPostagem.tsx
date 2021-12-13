@@ -9,7 +9,7 @@ import './CadastroPostagem.css';
 
 function CadastroPostagem() {
     let history = useHistory();
-    const { id } = useParams<{ id: string }>();
+    let { id } = useParams<{ id: string }>();
     const [temas, setTemas] = useState<Tema[]>([])
     const [token, setToken] = useLocalStorage('token');
 
@@ -74,7 +74,7 @@ function CadastroPostagem() {
     }
 
     async function onSubmit(evento: ChangeEvent<HTMLFormElement>) {
-        evento.preventDefault()
+        
 
         if (id !== undefined) {
             put(`/postagens`, postagem, setPostagem, {
@@ -97,6 +97,10 @@ function CadastroPostagem() {
 
     function back() {
         history.push('/postagens')
+    }
+
+    function goTeste() {
+        id = ''
     }
 
     return (
@@ -123,7 +127,7 @@ function CadastroPostagem() {
                         }
                     </Select>
                     <FormHelperText>Escolha um tema para a postagem</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button type="submit" variant="contained" color="primary" onClick={goTeste}>
                         Finalizar
                     </Button>
                 </FormControl>

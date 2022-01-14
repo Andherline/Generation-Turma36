@@ -8,13 +8,11 @@ Habilidades e tecnicas aprendidas no decorrer do bootcamp oferecido pela [ONG Ge
 - Estrutura de dados;
 - [Banco de Dados: Structured Query Language (SQL)](https://github.com/Andherline/Generation-Turma36/tree/main/MySQL);
 - [HTML5 + CSS3 + Javascript](https://github.com/Andherline/Generation-Turma36/tree/main/Fundamentos_Web);
-- [React, TypeScript](https://github.com/Andherline/Generation-Turma36/tree/main/RectJs/blog-pessoal); 
-- Material UI;
+- [React + TypeScript + Material UI;](https://github.com/Andherline/Generation-Turma36/tree/main/RectJs/blog-pessoal); 
 - Utilizando Java para desenvolvimento back-end e criação de APIs REST e utilização do framework Spring;
   - [Java](https://github.com/Andherline/Generation-Turma36/tree/main/Java)
   - [Framework Spring](https://github.com/Andherline/Generation-Turma36/tree/main/Spring%20REST "Framework Spring")
 - Metodologia Ágil (SCRUM);
-- Teste de aplicações e controle de qualidade;
 - Teste de aplicações e controle de qualidade;
 ## Habilidades Comportamentais:
 - Persistência;
